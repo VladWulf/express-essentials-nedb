@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  link(rel='stylesheet' href='static/css/login.css')
+  .ui.container
+    h1 Login form
+    form.ui.form(method='POST')
+      .field
+        label Login
+        input(type='text' name='username')
+      .field
+        label Password
+        input(type='password' name='password')
+      .field
+        button.ui.button.green(type='submit') Submit
+        a.ui.button.red(href='/register') Signup page
+      

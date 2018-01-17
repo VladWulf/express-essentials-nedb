@@ -1,0 +1,21 @@
+{
+  "name": "express-essentials-nedb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "VladWulf <agaev.vladimir@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "nedb": "^1.8.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.11"
+  }
+}
