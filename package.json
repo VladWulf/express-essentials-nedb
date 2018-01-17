@@ -5,7 +5,8 @@
   "author": "VladWulf <agaev.vladimir@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "test": "mocha"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
@@ -16,6 +17,7 @@
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "mocha": "^4.1.0",
     "nodemon": "^1.14.11"
   }
