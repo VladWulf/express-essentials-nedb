@@ -2,7 +2,7 @@
 
 <p>
 This is a personal template for quick sketches.
-It uses bcrypt, nedb, sessions and pug.
+It uses bcrypt, nedb, sessions, yaml, sass and pug.
 Uses mocha, chai and nodemon for dev.
 </p>
 
