@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const NEDB = require('nedb');
 const YAML = require('yamljs')
+const shutdownHandler = require('shutdown-handler')
+
 
 let env = YAML.load(__dirname + '/env/env.yml')
 config = env[env.environment]
@@ -50,3 +52,9 @@ app.use('/', routes);
 app.listen(config.server_port, config.server_host, () => {
   console.log(`Server started @ ${config.protocol}://${config.server_host}:${config.server_port}`)
 })
+
+shutdownHandler.on('exit', function () {
+  console.log("Closing");
+  const exec = require('child_process').exec;
+  exec("./scripts/autoreload_stop.sh")
+});

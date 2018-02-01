@@ -6,8 +6,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
+    "autoreload:start": "./scripts/autoreload_start.sh",
+    "autoreload:stop": "./scripts/autoreload_stop.sh",
     "build:css": "node-sass --recursive false --output public/css --source-map true --source-map-contents sass",
-    "start:dev": "nodemon -e sass,js -x 'npm run build:css && npm start app.js'",
+    "start:dev": "nodemon -e js,sass -x 'npm run build:css && npm run start'",
     "clear:db": "rm -rf db",
     "test": "mocha"
   },
@@ -25,6 +27,7 @@
     "connect-autoreload": "^0.0.6",
     "mocha": "^4.1.0",
     "node-sass": "^4.7.2",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "shutdown-handler": "^1.0.1"
   }
 }
