@@ -5,8 +5,21 @@ const session = require('express-session');
 const NEDB = require('nedb');
 const YAML = require('yamljs')
 
-let config = YAML.load(__dirname + '/env/env.yml')
-config = config[config.environment]
+let env = YAML.load(__dirname + '/env/env.yml')
+config = env[env.environment]
+
+
+if (env.environment === 'development') {
+  const autoreload = require('connect-autoreload');
+  const reloadServer = express()
+  reloadServer.use(autoreload({
+    watch_dirs: 'views public',
+    delay: 150
+  }))
+  reloadServer.listen(60000, () => {
+    console.log('Reload server running')
+  })
+}
 
 // INITS
 const app = express();
