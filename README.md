@@ -3,7 +3,7 @@
 <p>
 This is a personal template for quick sketches.
 It uses bcrypt, nedb, sessions, yaml, sass and pug.
-Uses mocha, chai and nodemon for dev.
+Uses mocha, chai and nodemon and connect-autoreload for dev.
 </p>
 
 
