@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node app.js",
     "build:css": "node-sass --recursive false --output public/css --source-map true --source-map-contents sass",
-    "start:dev": "nodemon -e sass js -x 'npm run build:css && npm start app.js'",
+    "start:dev": "nodemon -e sass,js -x 'npm run build:css && npm start app.js'",
     "clear:db": "rm -rf db",
     "test": "mocha"
   },
